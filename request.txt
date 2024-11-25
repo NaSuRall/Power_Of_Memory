@@ -1,0 +1,186 @@
+User Story 3:
+
+INSERT INTO `users`(`mail`, `mot_de_passe`, `pseudo`, `time_registration`, `time_last_login`)
+VALUES ("odi@gmail.com", "eid73783lkjld", "Destroyer", "2024-10-23 12:29:00", null)
+
+User Storie 4:
+
+UPDATE users
+SET mail = 'jean3@orange.fr', mot_de_passe = 'Motdepasse', pseudo = 'jeanlebestdesbest'
+WHERE id = 3;
+
+
+User Story 5:
+
+SELECT * FROM `users` WHERE users.mail = "cestunemail@gmail.com" AND users.mot_de_passe= "undeuxtroisquatre"
+
+
+User Story 6:
+
+INSERT INTO `game`(`name`) VALUES ("The Power Of Memory")
+
+
+User Story 7 :
+
+SELECT `game`.`name`, `users`.`pseudo`, `scores`.`difficulty`, `scores`.`scores`
+FROM `game`, `users`
+INNER JOIN `scores` ON `scores`.`id_users` = `users`.`id`;
+
+
+User Story 8:
+
+SELECT game.name, users.pseudo, scores.difficulty, scores.scores  FROM scores
+JOIN game ON scores.id_game=game.id JOIN users ON scores.id_users=users.id
+WHERE users.id=2 AND scores.difficulty='facile' AND game.id=1
+
+
+User Story 9:
+
+INSERT INTO scores
+VALUES (null,2,1,'facile', 30,'2024-10-29 11:43:00')
+
+SELECT  scores.scores, users.pseudo
+FROM `scores`
+INNER JOIN users
+ON scores.id_users = users.id
+WHERE scores.id_users = 2
+ORDER BY scores.scores ASC
+LIMIT 1
+
+User Story 10:
+
+INSERT INTO `messages` (`id`, `id_game`, `id_expediteur`, `message`, `time_message`)
+VALUES (26, 1, 5, 'Salut, à demain', '2023-10-29 10:40:30')
+
+
+User Story 11:
+
+SELECT messages.message, users.pseudo, messages.time_message, messages.isSender
+FROM messages
+INNER JOIN users
+ON messages.id_expediteur = users.id
+WHERE messages.isSender=1 and messages.time_message > DATE_SUB(NOW(), INTERVAL 24 HOUR)
+
+
+User Story 12:
+
+SELECT * from scores
+JOIN users ON users.id=scores.id_users
+WHERE users.pseudo='jesuistropfort'
+
+
+User Story 14:
+
+INSERT INTO `messages`(`id`, `id_game`, `id_expediteur`, `message`, `time_message`, `isSender`) VALUES (NULL, 1, 5, 'Salut, à demain', '2023-10-29 10:40:30', 1);
+
+DELETE FROM `messages` WHERE `message` = 'Salut, à demain';
+
+
+
+User Story 15:
+
+SELECT u1.pseudo AS Expediteur, u2.pseudo AS Receveur,private_message.date_send, private_message.date_read, private_message.seen,private_message.messages FROM private_message
+JOIN users u1 ON u1.id = private_message.id_first_user
+JOIN users u2 ON u2.id = private_message.id_second_user
+WHERE private_message.id_first_user = 3
+ORDER BY private_message.date_send OR private_message.date_read DESC
+LIMIT 1;
+
+User story 16 :
+
+SELECT
+    u1.pseudo AS Expediteur,
+    u2.pseudo AS Receveur,
+    private_message.messages,
+    private_message.seen,
+    private_message.date_send,
+    private_message.date_read,
+    COUNT(DISTINCT CASE WHEN private_message.id_first_user = u1.id THEN scores.id END) AS Nbr_partie_expediteur,
+    COUNT(DISTINCT CASE WHEN private_message.id_second_user = u2.id THEN scores.id END) AS Nbr_partie_receveur
+FROM
+    private_message
+JOIN
+    users u1 ON u1.id = private_message.id_first_user
+JOIN
+    users u2 ON u2.id = private_message.id_second_user
+LEFT JOIN
+    scores ON scores.id_users IN (u1.id, u2.id)
+WHERE
+    private_message.id_first_user = 3
+GROUP BY
+    u1.id, u2.id, private_message.id, scores.id_game
+ORDER BY
+    private_message.date_send DESC, private_message.date_read DESC
+LIMIT 1;
+
+User story 17:
+
+
+SELECT
+    YEAR(scores.time_party) AS annee,
+    MONTH(scores.time_party) AS mois,
+
+    (SELECT users.pseudo
+     FROM scores
+     JOIN users ON scores.id_users = users.id
+     WHERE YEAR(scores.time_party) = annee
+     AND MONTH(scores.time_party) = mois
+     ORDER BY scores.scores DESC
+     LIMIT 1 OFFSET 0) AS top1,
+
+    (SELECT users.pseudo
+     FROM scores
+     JOIN users ON scores.id_users = users.id
+     WHERE YEAR(scores.time_party) = annee
+     AND MONTH(scores.time_party) = mois
+     ORDER BY scores.scores DESC
+     LIMIT 1 OFFSET 1) AS top2,
+
+    (SELECT users.pseudo
+     FROM scores
+     JOIN users ON scores.id_users = users.id
+     WHERE YEAR(scores.time_party) = annee
+     AND MONTH(scores.time_party) = mois
+     ORDER BY scores.scores DESC
+     LIMIT 1 OFFSET 2) AS top3,
+
+    COUNT(scores.id) AS total_parties,
+
+    game.name AS jeu_le_plus_joue
+
+FROM
+    scores
+JOIN
+    users ON scores.id_users = users.id
+JOIN
+    game ON scores.id_game = game.id
+GROUP BY
+    annee, mois, game.name
+ORDER BY
+    annee, mois;
+
+
+user story 18:
+SELECT
+    YEAR(scores.time_party) AS annee,
+    MONTH(scores.time_party) AS mois,
+    users.pseudo,
+    AVG(scores.scores) AS moyenne,
+    COUNT(scores.id) AS nombre_parties,
+    game.name AS jeu_le_plus_joue
+
+FROM
+    scores
+JOIN
+    users ON scores.id_users = users.id
+JOIN
+    game ON scores.id_game = game.id
+
+WHERE
+    scores.id_users = 2
+
+GROUP BY
+    annee, mois, users.pseudo, game.name
+
+ORDER BY
+    annee, mois;

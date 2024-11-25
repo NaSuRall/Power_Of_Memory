@@ -1,2 +1,1 @@
-# Power_Of_Memory
-Création d'un projet Flash sur 4 semaines, consistant à développer un jeu de memory en ligne à l'aide des technologies PHP, HTML, CSS, JavaScript, et SQL. 
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/8qVwMgQV)
