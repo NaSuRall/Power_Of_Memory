@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+@font-face {
+    font-family: "KashimaDemo";
+    src: url("../font/KashimaDemo.otf") format("opentype");
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ----- TITRE ----- */
+.header2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/sakura.png");
+
+}
+.header2 a{
+    background-color: transparent;
+}
+.titre{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+   margin: auto;
+    background-color: transparent;
+}
+.titre h1{
+    color: white;
+    font-size: 7em;
+    font-family: "KashimaDemo";
+    background-color: transparent;
+}
+.titre p{
+    color: white;
+    margin-top: 5px;
+    font-family: "KashimaDemo";
+    background-color: transparent;
+}
+button{
+    font-family: "KashimaDemo";
+    font-size: 2em;
+    background-color: #5e5eff;;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    margin: 30px;
+    border: none;
+    transition: 0.3s ease-in-out;
+
+}
+button:active{
+    transform: scale(0.8);
+
+}
+button:hover{
+    box-shadow: 5px 7px 10px 5px rgba(0, 0, 0, 0.534);
+}
+
+body{
+  background: #272a51;
+}
+
+/* ----- CONTAINER ----- */
+.section1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: 10vh auto;
+    padding: 10px 8vw;
+    height: 100%;
+
+}
+
+.jeu{
+    display: flex;
+    float: left;
+    width: 33.33%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 20px;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+    background-color: transparent;
+    margin: 20px;
+  }
+.jeu:hover{
+    transform: translateY(-10%);
+}
+
+.jeu img{
+    width: 90%;
+    border-radius: 10px;
+    height: auto;
+}
+  /* Clear floats after the columns */
+  .jeux:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .jeu .text{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+      background-color: transparent;
+
+  }
+    .text h3{
+        font-size: 1.5em;
+        margin: 10px 0 10px 0;
+        background-color: transparent;
+
+    }
+    .text p{
+        background-color: transparent;
+    }
+  .jeu .text::before{
+    content: attr(data-nbr);
+    display: inline;
+    width: 40px;
+    height: 40px;
+    font-size: 3em;
+    color: #5e5eff;
+    font-family: "KashimaDemo";
+    position: absolute;
+    top: 0;
+    left: -50px;
+  }
+
+  /* ----- CONTAINE ----- */
+.section2{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0px 9.9vw;
+    height: 60vh;
+
+}
+.cercle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+}
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+
+}
+
+.div1 {
+    background-image: url(../img/img_memo/4X4/luffy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: span 2 / span 3;
+    grid-row: span 4 / span 5;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: all 2s;
+    transform-style: preserve-3d;
+
+}
+.effet{
+    border-radius: 10px;
+}
+.div2 {
+    background-color: rgb(59, 105, 255);
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 2s;
+    transform-style: preserve-3d;
+}
+
+.block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+}
+.block h2{
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+.block h3{
+    font-size: 1.2em;
+    color: white;
+    background-color: transparent;
+}
+.div3 {
+    background-color: rgb(113, 228, 103);
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 2s;
+    transform-style: preserve-3d;
+}
+
+.div4 {
+    background-color: rgb(231, 192, 62);
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 2s;
+    transform-style: preserve-3d;
+}
+
+
+.div6 {
+    background-color: rgb(180, 87, 189);
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 2s;
+    transform-style: preserve-3d;
+
+
+}
+.div2:hover{
+    transform: rotate(-360deg);
+}
+.div3:hover{
+    transform: rotate(360deg);
+}
+.div4:hover{
+    transform: rotate(-360deg);
+}
+.div6:hover{
+    transform: rotate(360deg);
+
+}
+/* ================================================================= CARD ================================================================= */
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+}
+.Tamere{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.Tamere h2{
+    font-size: 3em;
+    color: white;
+
+}
+.Tamere p{
+    font-size: 1.2em;
+    color: white;
+    margin-top: 20px;
+}
+.on{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.on .card{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    width: 300px;
+    height: 53%;
+    background-color: #12131d;
+    margin: 50px 30px 0  0;
+    padding: 20px 0 20px 0;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+
+
+}
+ .card:hover{
+    transform: rotateY(180deg) ;
+}
+.on .card svg{
+    stroke: white;
+    stroke-width: 0.5px;
+    font-size: 20px;
+    width:50%;
+    background-color: black;
+    border-radius: 50%;
+}
+.fa {
+    padding: 10px;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.star{
+    margin-top: 30px;
+}
+
+/*retour en haut de la page*/
+html{
+    scroll-behavior: smooth;
+}
+#retour_haut_page{
+    display: flex;
+    justify-content: center;
+    background-color: #272a51;
+}
+#texte_haut_page{
+    border: 3px solid #4AA3A2;
+    color: #4AA3A2;
+    font-family: "Bradley Hand", cursive;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #A7E0E0;
+    text-decoration:none;
+}
+#texte_haut_page:active{
+    transform: scale(0.8);
+
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+    .section1{
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .jeu{
+        width: 100%;
+
+    }
+    .section2{
+        height: 100%;
+    }
+
+    .Tamere p{
+        font-size: 1em;
+    }
+    .on{
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .on .card{
+        margin: 50px 0px 0 0;
+    }
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .div1 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 30vh; /* Réduit la hauteur de l'image pour s'adapter à l'écran */
+    }
+
+    .div2, .div3, .div4, .div6 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 20vh; /* Ajuste la hauteur des blocs */
+    }
+
+    .block h2 {
+        font-size: 2.5em; /* Réduit la taille du texte pour les petits écrans */
+    }
+
+    .block h3 {
+        font-size: 1em;
+    }
+    section{
+        height: 100%;
+    }
+
+}
+
+/* Pour les téléphones (écrans de moins de 768px de large) */
+@media screen and (max-width: 768px) {
+    body{
+        height: 100%;
+    }
+    .section1{
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .jeu{
+        width: 100%;
+
+    }
+    .section2{
+        height: 100%;
+    }
+
+    .Tamere p{
+        font-size: 1em;
+    }
+    .on{
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .on .card{
+        margin: 50px 0px 0 0;
+    }
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .div1 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 30vh; /* Réduit la hauteur de l'image pour s'adapter à l'écran */
+    }
+
+    .div2, .div3, .div4, .div6 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 20vh; /* Ajuste la hauteur des blocs */
+    }
+
+    .block h2 {
+        font-size: 2.5em; /* Réduit la taille du texte pour les petits écrans */
+    }
+
+    .block h3 {
+        font-size: 1em;
+    }
+    section{
+        height: 100%;
+    }
+
+}
+
+/* Pour les très petits écrans (écrans de moins de 480px de large) */
+@media screen and (max-width: 480px) {
+
+    body{
+        height: 100%;
+    }
+    .groupe{
+        width: 80%;
+    }
+    .section1{
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .jeu{
+        width: 100%;
+
+    }
+    .section2{
+        height: 100%;
+    }
+
+    .Tamere p{
+        font-size: 1em;
+    }
+    .on{
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+    }
+    .on .card{
+        margin: 50px 0px 0 0;
+    }
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .div1 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 30vh; /* Réduit la hauteur de l'image pour s'adapter à l'écran */
+    }
+
+    .div2, .div3, .div4, .div6 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 20vh; /* Ajuste la hauteur des blocs */
+    }
+
+    .block h2 {
+        font-size: 2.5em; /* Réduit la taille du texte pour les petits écrans */
+    }
+
+    .block h3 {
+        font-size: 1em;
+    }
+
+}

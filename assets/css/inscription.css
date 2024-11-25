@@ -1,0 +1,242 @@
+
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 48vh;
+    width: 100%;
+    background-image: url("../img/background.png") ;
+    background-position: center center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+
+}
+body{
+    background-color: #272a51;
+}
+/* ----- TITRE ----- */
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titre h1{
+    font-size: 5em;
+    font-family: "KashimaDemo";
+    color: white;
+}
+.titre p{
+    margin-top: 5px;
+    font-family: "KashimaDemo";
+    color: white;
+    font-size: 30px;
+}
+
+/* ----- FORM ----- */
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    background-color: #1c1d2d;
+
+}
+.corps-formulaire{
+    width: 90%;
+}
+.groupe{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+}
+.groupe a{
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-top: 20px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+form .groupe input{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+    border: none;
+}
+.groupe button{
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: #acacff;
+}
+.groupe button:active{
+    transform: scale(0.8);
+}
+.groupe button:hover{
+    background-color: #9292fd;
+}
+
+/*retour en haut de la page*/
+html{
+    scroll-behavior: smooth;
+}
+#retour_haut_page{
+    display: flex;
+    justify-content: center;
+    background-color: #272a51;
+}
+#texte_haut_page{
+    border: 3px solid #4AA3A2;
+    color: #4AA3A2;
+    font-family: "Bradley Hand", cursive;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #A7E0E0;
+    text-decoration:none;
+}
+#texte_haut_page:active{
+    transform: scale(0.8);
+}
+
+/* ----- Footer ----- */
+
+
+
+@font-face {
+    font-family: "KashimaDemo";
+    src: url("../font/KashimaDemo.otf") format("opentype");
+
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        height: 100%;
+    }
+    header{
+        height: 32vh;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    nav .onglets{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+    nav .onglets a{
+        font-size: 15px;
+        margin: 10px;
+    }
+    nav h2{
+        font-size: 2.5em;
+        padding-top: 10px;
+    }
+    .groupe{
+        width: 80%;
+    }
+
+
+
+}
+
+/* Pour les téléphones (écrans de moins de 768px de large) */
+@media screen and (max-width: 768px) {
+    body{
+        height: 100%;
+    }
+    header{
+        height: 17vh;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    nav .onglets{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+    nav .onglets a{
+        font-size: 15px;
+        margin: 10px;
+    }
+    nav h2{
+        font-size: 2.5em;
+       padding-top: 10px;
+    }
+
+    .titre h1{
+        font-size: 3em;
+    }
+    .titre p{
+        padding: 5px;
+
+    }
+
+    .groupe{
+        width: 90%;
+    }
+    section{
+        height: 100%;
+    }
+    .corps-formulaire{
+        padding: 10px;
+        margin: 30px 0 30px 0;
+    }
+
+
+}
+
+/* Pour les très petits écrans (écrans de moins de 480px de large) */
+@media screen and (max-width: 480px) {
+
+    header{
+        height: 13vh;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    nav .onglets{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    nav .onglets a{
+        font-size: 11px;
+    margin: 10px;
+    }
+
+    .titre h1{
+        font-size: 3em;
+    }
+    .titre p{
+        padding: 5px;
+    }
+
+    .groupe{
+        width: 90%;
+    }
+    section{
+        height: 100%;
+    }
+    .corps-formulaire{
+        padding: 10px;
+        margin: 30px 0 30px 0;
+    }
+
+}

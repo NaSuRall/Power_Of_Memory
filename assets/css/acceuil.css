@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.description{
+    background: #E8AABE;
+}
+
+.description h3{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.text1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text1 img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 25%;
+    height: 25%;
+    border-radius: 5%;
+}
+
+.text1 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloc {
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #4AA3A2;
+    border-radius: 10px;
+    background-color: #A7E0E0;
+}
+
+.stats h3{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.stat{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #E8AABE;
+}
+
+
+.columne{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+.block{
+    height: 211px;
+    width: 90%;
+    margin: 10px;
+    text-align: center;
+}
+
+.block img{
+    display: flex;
+    height: 230px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stats{
+    display: flex;
+    background-color: #E8AABE;
+    flex-direction: column;
+}
+
+.equipe h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.equipe p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.text2 .personne1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #4AA3A2;
+    background-color: #A7E0E0FF;
+    margin-right: 10px;
+    width: 15%;
+    height: 225px;
+}
+.text2 .personne2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #4AA3A2;
+    background-color: #A7E0E0FF;
+    margin-right: 10px;
+    width: 15%;
+    height: 225px;
+}
+
+.text2 .personne3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #4AA3A2;
+    background-color: #A7E0E0FF;
+    margin-right: 10px;
+    width: 15%;
+    height: 225px;
+}
+
+.text2 .personne4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #4AA3A2;
+    background-color: #A7E0E0FF;
+    margin-right: 10px;
+    width: 15%;
+    height: 225px;
+}
+

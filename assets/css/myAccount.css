@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "KashimaDemo";
+    src: url("../font/KashimaDemo.otf") format("opentype");
+
+}
+body{
+    background-color: #272a51;
+}
+/*titre*/
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titre h1{
+    font-size: 5em;
+    font-family: "KashimaDemo";
+    margin-bottom: 50px;
+    color: white;
+}
+.titre p{
+    margin-top: 5px;
+    font-family: "KashimaDemo";
+}
+
+/*menu de connexion*/
+section, #modif_mdp{
+    background-color: #1c1d2d;
+    height: 70vh;
+}
+
+.titre_modif{
+    font-family: "KashimaDemo";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+#champ_modif_email, #champ_modif_mdp{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.bouton_modif{
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    width: 40%;
+}
+.bouton_connection{
+    margin-top: 20px;
+    font-size: 30px;
+    width: 20%;
+}
+
+/*retour en haut de la page*/
+#retour_haut_page{
+    display: flex;
+    justify-content: center;
+    background-color: #272a51;
+}
+#texte_haut_page{
+    border: 3px solid #4AA3A2;
+    color: #4AA3A2;
+    font-family: "Bradley Hand", cursive;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #A7E0E0;
+    text-decoration:none;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 1024px) {
+    header{
+        height: 13vh;
+    }
+
+    .titre h1{
+        font-size: 50px;
+    }
+    .titre_modif{
+        font-size: 20px;
+    }
+    .bouton_modif{
+        width: 90%;
+    }
+    .bouton_connection{
+        width: 70%;
+    }
+}
+@media  screen and (max-width: 768px) {
+    header{
+        height: 13vh;
+    }
+    .titre h1{
+        font-size: 50px;
+    }
+    .titre_modif{
+        font-size: 20px;
+    }
+    .bouton_modif{
+        width: 90%;
+    }
+    .bouton_connection{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    body{
+        height: 100%;
+    }
+    header{
+        height: 13vh;
+    }
+
+    .titre h1{
+        font-size: 50px;
+    }
+    .titre_modif{
+        font-size: 20px;
+    }
+    .bouton_modif{
+        width: 90%;
+    }
+    .bouton_connection{
+        width: 70%;
+    }
+}

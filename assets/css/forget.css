@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #272a51;
+}
+/*police d'ecriture */
+@font-face {
+  font-family: "KashimaDemo";
+  src: url("../font/KashimaDemo.otf") format("opentype");
+
+}
+/*image arriere plan */
+#banniere{
+  /*background-image: url("assets/img/banni.jpeg");*/
+  background-image: url("assets/img/background.png");
+}
+
+header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 48vh;
+  width: 100%;
+  background-image: url("../img/background.png") ;
+  background-position: center center;
+  background-repeat:no-repeat ;
+  background-size: cover;
+
+}
+/*menu de connexion*/
+section{
+  background-color: #1c1d2d;
+  height: 1000px;
+
+}
+
+.carre{
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 600px;
+  display:flex;
+  flex-direction: column;
+  right: 500px;
+  margin-left: 400px;
+  padding-bottom: 160px;
+
+}
+
+
+.insideforget{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+
+
+}
+
+.insideforget input{
+  gap: 50px;
+
+}
+
+
+
+
+
+
+/*retour en haut de la page*/
+html{
+  scroll-behavior: smooth;
+}
+#retour_haut_page{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#texte_haut_page{
+  border: 3px solid #4AA3A2;
+  color: #4AA3A2;
+  font-family: "Bradley Hand", cursive;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #A7E0E0;
+  text-decoration:none;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 1024px) {
+  header{
+    height: 26vh;
+  }
+  .titre h1{
+    font-size: 80px;
+  }
+  .titre_connexion{
+    font-size: 20px;
+  }
+  .bouton_connection{
+    width: 90%;
+  }
+  .validation_connexion{
+    width: 70%;
+  }
+}
+@media  screen and (max-width: 768px) {
+  header{
+    height: 34vh;
+  }
+
+  .titre h1{
+    font-size: 50px;
+  }
+  .titre_connexion{
+    font-size: 20px;
+  }
+  .bouton_connection{
+    width: 90%;
+  }
+  .validation_connexion{
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  body{
+    height: 100%;
+  }
+  header{
+    height: 18vh;
+  }
+
+  .titre h1{
+    font-size: 50px;
+  }
+  #titre_connexion{
+    font-size: 20px;
+  }
+  .bouton_connection{
+    width: 90%;
+  }
+  #validation_connexion{
+    width: 70%;
+  }
+
+
+}
